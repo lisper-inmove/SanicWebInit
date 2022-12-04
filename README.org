@@ -1,0 +1,21 @@
+#+SETUPFILE: ~/.emacs.d/org-templates/template.org
+#+TITLE: Sanic Web Init
+
+* 环境变量
+#+begin_src shell
+  export APPNAME=demo                            # 项目名,同时也是 Sanic的name参数
+  export LOGGER_ENABLE_CONSOLE=true              # 是否开启终端日志,不传默认是开启的
+  export LOGGER_ENABLE_SYSLOG=true               # 是否开启rsyslog日志
+  export LOGGER_SYSLOG_HOST=logger.server        # rsyslog日志的地址
+  export LOGGER_SYSLOG_PORT=514                  # rsyslog日志的端口
+  export LOGGER_SYSLOG_FACILITY=local7           # rsyslog日志的设备名
+#+end_src
+* 测试环境启动
+#+begin_src shell
+  sanic server:app --host=0.0.0.0 --port=18888 --fast --debug
+#+end_src
+* 子模块
+#+begin_src shell
+  git submodule add git@github.com:lisper-inmove/PythonLogger.git logger
+  git submodule add git@github.com:lisper-inmove/PythonUtils.git utils
+#+end_src
