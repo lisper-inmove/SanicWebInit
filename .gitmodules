@@ -1,3 +1,6 @@
 [submodule "logger"]
 	path = logger
 	url = git@github.com:lisper-inmove/PythonLogger.git
+[submodule "utils"]
+	path = utils
+	url = git@github.com:lisper-inmove/PythonUtils.git
