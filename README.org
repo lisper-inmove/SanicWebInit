@@ -19,3 +19,8 @@
   git submodule add git@github.com:lisper-inmove/PythonLogger.git logger
   git submodule add git@github.com:lisper-inmove/PythonUtils.git utils
 #+end_src
+* 新项目初始化
+#+begin_src shell
+  git clone --bare git@github.com:lisper-inmove/SanicWebInit.git RepoName
+  cd RepoName && git push --mirror git@github.com:lisper-inmove/RepoName.git
+#+end_src

@@ -20,4 +20,5 @@ class Demo(HTTPMethodView):
 
     async def get(self, request):
         result = self.demo_ctrl.get_demo()
+        self.logger.info(f"Demo Get: {result}")
         return UnifyResponse.R({"hello": result})
